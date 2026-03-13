@@ -1,12 +1,26 @@
 .App {
     margin: 0 auto;
-    width: 50%;
-
-    .textarea {
+    width: 70%;
+    
+    .candidateInfo {
         width: 100%;
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
     }
 
     .answer {
-        margin-top: 20px;
+        margin: 20px 0 100px 0;
+        white-space: pre-wrap;
+
+        &.loading::after {
+            content: '▋';
+            display: inline-block;
+            animation: blink 0.7s step-start infinite;
+        }
     }
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
