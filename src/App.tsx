@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import TransitionTest from './components/TransitionTest';
 import s from './App.module.scss';
 
 function App() {
@@ -102,6 +103,8 @@ function App() {
       </div>
       <button onClick={handleSubmit} disabled={isLoading}>提交</button>
       <div className={`${s.answer} ${isLoading ? s.loading : ''}`}>{answer}</div>
+
+      <TransitionTest />
     </div>
   )
 }
