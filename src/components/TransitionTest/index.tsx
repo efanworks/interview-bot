@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, useTransition, useDeferredValue } from "react";
+import { useState, ChangeEvent, useTransition } from "react";
 import BigList from "../BigList";
 
 export default function TransitionTest() {
@@ -18,9 +18,7 @@ export default function TransitionTest() {
         } else {
             setMyQuery(query + '-zhuo');
         }
-    }   
-
-    // const deferredQuery = useDeferredValue(query);
+    }
 
     return (
         <>
