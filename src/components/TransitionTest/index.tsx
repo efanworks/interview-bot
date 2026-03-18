@@ -20,7 +20,7 @@ export default function TransitionTest() {
         }
     }   
 
-    const deferredQuery = useDeferredValue(query);
+    // const deferredQuery = useDeferredValue(query);
 
     return (
         <>
