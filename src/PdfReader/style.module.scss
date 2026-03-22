@@ -1,0 +1,22 @@
+.pdfReader {
+    border: 1px dashed red;
+
+    .resumeUpload {
+        .button {
+            background: transparent;
+            border: none;
+
+            .text {
+                margin-top: 8px;
+            }
+
+            .deleteButton {
+                margin-top: 8px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                padding: 0;
+            }
+        }
+    }
+}
