@@ -1,4 +1,4 @@
-import PdfReader from "../../PdfReader";
+import PdfReader from "../PdfReader";
 
 export default function Suggestion() {
     return (

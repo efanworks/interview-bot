@@ -1,7 +1,7 @@
 import { useState, type MouseEvent } from 'react';
 import { DeleteOutlined, LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import { message, Upload, type UploadProps } from 'antd';
-import {uploadResume} from '../api/uploadResume';
+import {uploadResume} from '../../api/uploadResume';
 import s from './style.module.scss';
 
 type PdfReaderProps = {
