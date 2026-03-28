@@ -52,4 +52,4 @@ npm run type-check
    - `Pull requests`（Read/Write）
    - `Issues`（Read/Write）
 
-> 说明：当前 `claude-review` 工作流已使用 OpenRouter 中转（`ANTHROPIC_BASE_URL=https://openrouter.ai/api` + `ANTHROPIC_AUTH_TOKEN`）。
+> 说明：当前 `claude-review` 工作流已使用 OpenRouter 中转（`ANTHROPIC_BASE_URL=https://openrouter.ai/api`，并将 `OPENROUTER_API_KEY` 作为 `anthropic_api_key` 传入 Action）。
