@@ -7,18 +7,18 @@ import { useEffect, useState, useRef } from "react";
  * @returns 防抖后的值
  */
 export default function useDebouncedValue<T>(value: T, delay: number) {
-    const [debouncedvalue, setDebouncedValue] = useState(value);
-    const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
+    // const [debouncedvalue, setDebouncedValue] = useState(value);
+    // const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-    useEffect(() => {
-        timer.current = setTimeout(() => {
-            setDebouncedValue(value);
-        }, delay);
+    // useEffect(() => {
+    //     timer.current = setTimeout(() => {
+    //         setDebouncedValue(value);
+    //     }, delay);
 
-        return () => {
-            clearTimeout(timer.current);
-        }
-    }, [value]);
+    //     return () => {
+    //         clearTimeout(timer.current);
+    //     }
+    // }, [value]);
 
-    return debouncedvalue;
+    // return debouncedvalue;
 }
