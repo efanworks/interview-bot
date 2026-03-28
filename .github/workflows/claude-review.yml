@@ -28,4 +28,6 @@ jobs:
           ANTHROPIC_AUTH_TOKEN: ${{ secrets.OPENROUTER_API_KEY }}
           ANTHROPIC_API_KEY: ""
         with:
-          mode: review
+          anthropic_api_key: ${{ secrets.OPENROUTER_API_KEY }}
+          prompt: "Review this pull request for code quality, correctness, and security. Analyze the diff, then post your findings as review comments."
+          claude_args: "--max-turns 5"
