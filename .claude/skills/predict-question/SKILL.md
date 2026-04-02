@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 Always Respond in Simplified Chinese.
 
-1. **读取项目根目录文件 `indicate.json`**
+1. **读取项目根目录文件 `resume.json`**
 2. **解析 JSON，提取字段：**
     - `jd`: 岗位信息（JD）
     - `project`: 候选人项目经历
