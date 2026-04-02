@@ -28,5 +28,11 @@ jobs:
           anthropic_api_key: ${{ secrets.OPENROUTER_API_KEY }}
           prompt: "Review this pull request for code quality, correctness, and security. Analyze the diff, then post your findings as review comments."
           claude_args: "--max-turns 5 --model minimax/minimax-m2.5"
+          settings: |
+            {
+              "env": {
+                "ANTHROPIC_BASE_URL": "https://openrouter.ai/api/v1"
+              }
+            }
         env:
           ANTHROPIC_BASE_URL: https://openrouter.ai/api/v1
