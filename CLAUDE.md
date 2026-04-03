@@ -6,13 +6,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Interview Bot - 输入岗位描述 + 简历/项目描述，输出面试问题预测。
 
-## Tech Stack
-
-- React 19
-- TypeScript
-- Vite 5
-- Ant Design 6
-
 ## Common Commands
 
 ```bash
@@ -28,8 +21,8 @@ npm run type-check   # TypeScript 类型检查
 ```
 src/
 ├── components/      # React 组件
-│   ├── BigList.tsx
-│   ├── DebounceTest.tsx
+│   ├── BigList/
+│   ├── DebounceTest/
 │   ├── PdfReader/
 │   ├── Suggestion/
 │   └── TransitionTest/
@@ -40,12 +33,6 @@ src/
 ├── api/             # API 接口
 └── App.tsx          # 主应用组件
 ```
-
-## Git Workflow
-
-- 主分支: `master`
-- 开发分支: `dev`
-- 功能分支: `feature/*`
 
 ## CI/CD
 
@@ -59,4 +46,42 @@ src/
 
 ## 约束
 
-- 新建组件必须放在src/components目录下，并新建组件文件夹，其中包括index.tsx和style.module.scss
+### 文件结构规范
+
+- 通用、业务组件必须放在src/components/，每个组件至少包含 index.tsx + style.module.scss
+- Hooks 必须放在 src/hooks/
+- API 放在 src/api/
+- 每次在 src/ 新增文件，都更新 CLAUDE.md 中的 Project Structure
+
+### 代码风格
+
+- 使用函数组件，不用 class
+- 使用 TypeScript，带类型声明
+- CSS 使用 SCSS module
+
+### 技术栈
+
+- React 19
+- TypeScript
+- Vite 5
+- Ant Design 6
+
+### Git 规范
+
+- 主分支: `master`
+- 功能分支: `feature/*`，比如 feature/add-auth-check
+- commit message 包括功能陈述句 + 空行 + 具体修改点，示例：
+
+```
+新增用户权限校验功能
+
+1.新增Auth组件
+2.新增AuthCheck API
+...
+```
+
+### 安全约束
+
+- 禁止提交 .env.local
+- 禁止直接提交密钥
+- API 密钥用环境变量
