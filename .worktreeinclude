@@ -1,0 +1,4 @@
+.env.local
+resume.json
+dist/
+node_modules/
