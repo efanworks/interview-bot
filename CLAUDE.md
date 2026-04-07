@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Interview Bot - 输入岗位描述 + 简历/项目描述，输出面试问题预测。
+Interview Bot - 输入岗位描述 + 简历/项目描述，基于 AI 大模型输出面试问题预测。采用多页面路由架构，侧边栏导航切换不同功能模块（面试预测、Debounce 测试、Transition 测试等）。
 
 ## Common Commands
 
