@@ -29,11 +29,20 @@ src/
 ├── hooks/           # 自定义 hooks
 │   ├── useDebouncedFn.ts
 │   ├── useDebouncedValue.ts
+│   ├── useThrottledFn.ts
 │   └── useTips.ts
+├── pages/           # 页面组件
+│   ├── Interview/
+│   ├── DebounceTest/
+│   └── TransitionTest/
 ├── api/             # API 接口
+│   └── uploadResume.ts
 ├── utils/           # 工具函数
 │   └── deepClone.ts
-└── App.tsx          # 主应用组件
+├── App.tsx          # 应用入口，渲染 AppLayout
+├── AppLayout.tsx    # 布局壳（侧边导航 + 内容区）
+├── routes.ts        # 集中式路由配置
+└── main.tsx         # 应用启动入口
 ```
 
 ## CI/CD
