@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Interview Bot - 输入岗位描述 + 简历/项目描述，基于 AI 大模型输出面试问题预测。采用多页面路由架构，侧边栏导航切换不同功能模块（面试预测、Debounce 测试、Transition 测试等）。
 
-## Common Commands
+## Commands
 
 ```bash
 npm install          # 安装依赖
@@ -15,6 +15,13 @@ npm run build        # 构建生产版本
 npm run preview      # 预览构建结果
 npm run type-check   # TypeScript 类型检查
 ```
+
+## 技术栈
+
+- React 19
+- TypeScript
+- Vite 5
+- Ant Design 6
 
 ## Project Structure
 
@@ -45,24 +52,14 @@ src/
 └── main.tsx         # 应用启动入口
 ```
 
-## CI/CD
+## 规则
 
-- `ci-build`: 任意分支 push 后自动构建
-- `claude-review`: PR 创建/更新时触发 Claude Code Review（需要安装 GitHub App + 订阅 Claude Pro/Max）
-
-## Note
-
-- 项目使用 ESM (`"type": "module"`)
-- 无测试配置，无 lint
-
-## 约束
-
-### 文件结构规范
+### 文件结构
 
 - 通用、业务组件必须放在src/components/，每个组件至少包含 index.tsx + style.module.scss
 - Hooks 必须放在 src/hooks/
 - API 放在 src/api/
-- 每次在 src/ 新增文件，都更新 CLAUDE.md 中的 Project Structure
+- src/ 新增文件，更新 CLAUDE.md Project Structure
 
 ### 代码风格
 
@@ -70,17 +67,9 @@ src/
 - 使用 TypeScript，带类型声明
 - CSS 使用 SCSS module
 
-### 技术栈
-
-- React 19
-- TypeScript
-- Vite 5
-- Ant Design 6
-
-### Git 规范
+### Git
 
 - 主分支: `master`
-- 功能分支: `feature/*`，比如 feature/add-auth-check
 - commit message 包括功能陈述句 + 空行 + 具体修改点，示例：
 
 ```
@@ -88,10 +77,9 @@ src/
 
 1.新增Auth组件
 2.新增AuthCheck API
-...
 ```
 
-### 安全约束
+### 安全
 
 - 禁止提交 .env.local
 - 禁止直接提交密钥
