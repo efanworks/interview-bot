@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(* --version)",
+      "Bash(* --help *)"
+    ],
+    "deny": [
+      "Read(./.env.*)"
+    ]
+  }
+}
