@@ -19,5 +19,5 @@ disable-model-invocation: true
 
 - 确认 - 直接提交
 - 继续修改 - 重新生成 commit message，返回第 3 步
-- 用户自行修改 - 创建临时文件 `.commit_message`，将已生成的 message 写入其中，执行 `code .commit_message` 让用户编辑，完成后直接提交并删除临时文件
+- 用户自行修改 - 创建临时文件 `.commit_message`，将已生成的 message 写入其中，执行 `code --wait .commit_message` 打开 VS Code 让用户编辑，文件关闭后自动读取内容、执行 git commit 并删除临时文件
 - 取消 - 结束工作流，不提交
