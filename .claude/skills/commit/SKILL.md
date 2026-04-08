@@ -2,6 +2,7 @@
 name: commit
 description: Automatically generate commit messages based on code changes, and commit your changes.
 disable-model-invocation: true
+allowed-tools: Read Write Bash
 ---
 
 ## Generate git commit message
