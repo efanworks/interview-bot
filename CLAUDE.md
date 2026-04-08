@@ -67,19 +67,14 @@ src/
 - 使用 TypeScript，带类型声明
 - CSS 使用 SCSS module
 
-### Git
+### 技术栈
 
-- 主分支: `master`
-- commit message 包括功能陈述句 + 空行 + 具体修改点，示例：
+- React 19
+- TypeScript
+- Vite 5
+- Ant Design 6
 
-```
-新增用户权限校验功能
-
-1.新增Auth组件
-2.新增AuthCheck API
-```
-
-### 安全
+### 安全约束
 
 - 禁止提交 .env.local
 - 禁止直接提交密钥
