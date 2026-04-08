@@ -1,4 +1,4 @@
-# Git CL (Change List) Description Rules
+# CL (Change List) Description Rules
 
 A CL description is a public record of change, and it is important that it
 communicates:
@@ -34,3 +34,5 @@ The description should fill in the details and include any supplemental informat
 > Make the freelist larger, and add a goroutine that frees the freelist entries
 > slowly over time, so that idle servers eventually release all freelist
 > entries.
+
+References: [CL Descriptions](https://github.com/google/eng-practices/blob/master/review/developer/cl-descriptions.md)
