@@ -6,13 +6,18 @@ disable-model-invocation: true
 
 ## Generate git commit message
 
-1. 检查 stage 区是否为空，如果为空，则提示当前无代码变更，并结束工作流
+1. 检查 stage 区是否为空，如果为空，则提示当前无代码变更，并放弃本次提交
 2. Use cl-descriptions.md in this skill directory for the commit message rules.
-3. 展示 commit message 并向用户提供以下选择：
+3. 展示 commit message，并**使用 AskUserQuestion 工具**向用户显示以下选择：
 
 - 确认（直接提交）
-- 继续修改（根据用户提出的修改意见）
-- 用户自行修改，提供编辑能力
+- 继续修改（提供修改建议）
+- 用户自行修改
 - 取消
 
-4. 确认后执行 commit
+4. 根据用户的选择：
+
+- 确认 - 直接提交
+- 继续修改 - 重新生成 commit message，返回第 3 步
+- 用户自行修改 - 提供编辑界面让用户修改，完成后直接提交
+- 取消 - 结束工作流，不提交
