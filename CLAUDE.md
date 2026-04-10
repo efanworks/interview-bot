@@ -56,14 +56,15 @@ src/
 
 ### 文件结构
 
-- 通用、业务组件必须放在src/components/，每个组件至少包含 index.tsx + style.module.scss
+- 通用、业务组件必须放在src/components/，每个组件必须有自己的目录
 - Hooks 必须放在 src/hooks/
-- API 放在 src/api/
+- API 必须放在 src/api/
 - src/ 新增文件，更新 CLAUDE.md Project Structure
 
 ### 代码风格
 
-- 使用函数组件，不用 class
+- All .tsx files must export a function component as the default export
+- No class components
 - 使用 TypeScript，带类型声明
 - CSS 使用 SCSS module
 
