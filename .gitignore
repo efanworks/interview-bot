@@ -9,6 +9,7 @@ dist-tsc
 .env.test.local
 .env.production.local
 resume.json
+CLAUDE.local.md
 
 # IDE
 .vscode
