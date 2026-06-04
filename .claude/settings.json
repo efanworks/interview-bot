@@ -8,6 +8,15 @@
     ],
     "deny": [
       "Read(./.env.*)"
-    ]
+    ],
+    "defaultMode": "default"
+  },
+  "extraKnownMarketplaces": {
+    "efan-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "efanworks/efan-marketplace"
+      }
+    }
   }
 }

@@ -1,14 +1,17 @@
-import { Layout, Menu } from 'antd';
-import { useNavigate, useLocation, useRoutes } from 'react-router-dom';
-import { routes } from './routes';
-import s from './AppLayout.module.scss';
+import { Layout, Menu } from "antd";
+import { useNavigate, useLocation, useRoutes } from "react-router-dom";
+import { routes } from "./routes";
+import s from "./AppLayout.module.scss";
 
 const { Sider, Content } = Layout;
 
 const menuItems = [
-  { key: '/', label: 'Interview Bot', path: '/' },
-  { key: '/dev/debounce', label: 'Debounce Test', path: '/dev/debounce' },
-  { key: '/dev/transition', label: 'Transition Test', path: '/dev/transition' },
+  { key: "/", label: "Interview Bot", path: "/" },
+  { key: "/dev/debounce", label: "Debounce Test", path: "/dev/debounce" },
+  { key: "/dev/transition", label: "Transition Test", path: "/dev/transition" },
+  { key: "/tasksReducer", label: "Tasks by Reducer", path: "/tasksReducer" },
+  { key: "/tasksZustand", label: "Tasks by Zustand", path: "/tasksZustand" },
+  { key: "/tasksRedux", label: "Tasks by Redux", path: "/tasksRedux" }
 ];
 
 export default function AppLayout() {
@@ -27,9 +30,7 @@ export default function AppLayout() {
         />
       </Sider>
       <Layout>
-        <Content className={s.content}>
-          {routesElement}
-        </Content>
+        <Content className={s.content}>{routesElement}</Content>
       </Layout>
     </Layout>
   );
