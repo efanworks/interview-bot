@@ -11,7 +11,8 @@ const menuItems = [
   { key: "/dev/transition", label: "Transition Test", path: "/dev/transition" },
   { key: "/tasksReducer", label: "Tasks by Reducer", path: "/tasksReducer" },
   { key: "/tasksZustand", label: "Tasks by Zustand", path: "/tasksZustand" },
-  { key: "/tasksRedux", label: "Tasks by Redux", path: "/tasksRedux" }
+  { key: "/tasksRedux", label: "Tasks by Redux", path: "/tasksRedux" },
+  { key: "/vueTasks", label: "Tasks for Vue", path: "/vueTasks" }
 ];
 
 export default function AppLayout() {

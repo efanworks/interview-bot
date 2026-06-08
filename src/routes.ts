@@ -1,15 +1,21 @@
-import React from "react";
+import { createElement } from "react";
 import { RouteObject } from "react-router-dom";
 import InterviewPage from "@/pages/Interview";
 import DebounceTestPage from "@/pages/DebounceTest";
 import TransitionTestPage from "@/pages/TransitionTest";
-import { Tasks, TasksZustand, TasksRedux } from "@efanworks/babel-exp/components";
+import {
+  Tasks,
+  TasksRedux,
+  TasksZustand
+} from "@efanworks/babel-exp/components";
+import { Loader } from "./components/Loader";
 
 export const routes: RouteObject[] = [
-  { path: "/", element: React.createElement(InterviewPage) },
-  { path: "/dev/debounce", element: React.createElement(DebounceTestPage) },
-  { path: "/dev/transition", element: React.createElement(TransitionTestPage) },
-  { path: "/tasksReducer", element: React.createElement(Tasks) },
-  { path: "/tasksZustand", element: React.createElement(TasksZustand) },
-  { path: "/tasksRedux", element: React.createElement(TasksRedux) }
+  { path: "/", element: createElement(InterviewPage) },
+  { path: "/dev/debounce", element: createElement(DebounceTestPage) },
+  { path: "/dev/transition", element: createElement(TransitionTestPage) },
+  { path: "/tasksReducer", element: createElement(Tasks) },
+  { path: "/tasksZustand", element: createElement(TasksZustand) },
+  { path: "/tasksRedux", element: createElement(TasksRedux) },
+  { path: "/vueTasks", element: createElement(Loader) }
 ];
