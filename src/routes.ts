@@ -6,7 +6,8 @@ import TransitionTestPage from "@/pages/TransitionTest";
 import {
   Tasks,
   TasksRedux,
-  TasksZustand
+  TasksZustand,
+  TimerMobx
 } from "@efanworks/babel-exp/components";
 import { Loader } from "./components/Loader";
 
@@ -17,5 +18,6 @@ export const routes: RouteObject[] = [
   { path: "/tasksReducer", element: createElement(Tasks) },
   { path: "/tasksZustand", element: createElement(TasksZustand) },
   { path: "/tasksRedux", element: createElement(TasksRedux) },
-  { path: "/vueTasks", element: createElement(Loader) }
+  { path: "/vueTasks", element: createElement(Loader) },
+  { path: "/timerMobx", element: createElement(TimerMobx) }
 ];

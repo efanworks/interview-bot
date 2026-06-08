@@ -12,7 +12,8 @@ const menuItems = [
   { key: "/tasksReducer", label: "Tasks by Reducer", path: "/tasksReducer" },
   { key: "/tasksZustand", label: "Tasks by Zustand", path: "/tasksZustand" },
   { key: "/tasksRedux", label: "Tasks by Redux", path: "/tasksRedux" },
-  { key: "/vueTasks", label: "Tasks for Vue", path: "/vueTasks" }
+  { key: "/vueTasks", label: "Tasks for Vue", path: "/vueTasks" },
+  { key: "/timerMobx", label: "timer for mobx", path: "/timerMobx" }
 ];
 
 export default function AppLayout() {
